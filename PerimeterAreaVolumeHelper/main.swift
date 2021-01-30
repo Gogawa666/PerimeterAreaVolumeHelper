@@ -49,6 +49,11 @@ func areaOfTriangle(l: Double, w: Double) -> Double {
     
 }
 
+func perimeterOfTriangle(W: Double, ls: Double, rs: Double) -> Double {
+    
+    return  ls + rs + W
+    
+}
 
 //MARK: Input
 
@@ -58,13 +63,15 @@ let givenRadius = 4.0
 let givenHight = 5.0
 let givenSideleft = 12.0
 let givenSideright = 3.0
-let givenLength: Double = 10   // Set to a double using "type inference" (swift guesses the type)
+let givenLength = 10.0   // Set to a double using "type inference" (swift guesses the type)
 
 //MARK: Process
 let area = areaOfRectangle(l: givenLength, w: givenWidth)
 let peri = perimeterOfRectangle(l: givenLength, w: givenWidth)
 let areac = areaOfCircle(r: givenRadius)
 let peric = perimeterOfCircle(r: givenRadius)
+let areat = areaOfTriangle(l: givenLength, w: givenWidth)
+let perit = perimeterOfTriangle(W: givenWidth, ls: givenSideleft, rs: givenSideright)
 
 
 //MARK: Output
