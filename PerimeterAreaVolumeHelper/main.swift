@@ -34,36 +34,55 @@ func areaOfCircle(r: Double) -> Double {
     return Double.pi * r * r
 }
 
-func perimeterOfCircle(radius: Double) -> Double {
+/// Find the parameter of circle
+/// - Parameter radius: the distance from the centre of circle to its outer edge
+/// - Returns: parameter of the circle
+func perimeterOfCircle(r: Double) -> Double {
     
-    return Double.pi * 2 * radius
+    return Double.pi * 2 * r
+    
+}
+
+func areaOfTriangle(l: Double, w: Double) -> Double {
+    
+    return l * w * 1/2
     
 }
 
 
 //MARK: Input
-let givenLength = 10.0   // Set to a double using "type inference" (swift guesses the type)
-let givenWidth: Double = 2.0    // Set to a double using "type annotation" (swift guesses the type)
-let givenRadius = 3.0
-let givenHight = 4.0
-let givenSideleft = 5.0
+
+
+let givenWidth = 2.0
+let givenRadius = 4.0
+let givenHight = 5.0
+let givenSideleft = 12.0
 let givenSideright = 3.0
+let givenLength: Double = 10   // Set to a double using "type inference" (swift guesses the type)
 
 //MARK: Process
 let area = areaOfRectangle(l: givenLength, w: givenWidth)
 let peri = perimeterOfRectangle(l: givenLength, w: givenWidth)
 let areac = areaOfCircle(r: givenRadius)
-let peric = perimeterOfCircle(radius: givenRadius)
-
-
-
+let peric = perimeterOfCircle(r: givenRadius)
 
 
 //MARK: Output
-print("The area of lectangle is \(area)")       //Example of "string interpolation"
+
+
+
+
+print("Select the tyoe of shape and value you want")
+
+
+
+print("The area of lectangle is \(area)") //Example of "string interpolation"
+
 print("The perimeter of lencangle is \(peri)")
+
 print("The area of circle is \(areac)")
+
 print("The perimeter of circle is \(peric)")
 
-                                   
+
 
