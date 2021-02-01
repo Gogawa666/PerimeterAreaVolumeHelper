@@ -134,34 +134,47 @@ let shapeChoice = String(readLine()!)
 switch shapeChoice {
 
 case "1":
+    print("Input the Length")
     let givenLength = Double(readLine()!)!
+    print("Input the Width")
     let givenBottom = Double(readLine()!)!
     let peri = perimeterOfRectangle(l: givenLength, w: givenBottom)
     print("The perimeter of lencangle is \(peri)")
     
 case "2":
+    print("Input the Radius")
     let Radius = Double(readLine()!)!
     let peric = perimeterOfCircle(r: Radius)
     print("The perimeter of circle is \(peric)")
 case "3":
+    print("Input the Right side of the triangle")
     let givenSideRight = Double(readLine()!)!
+    print("Input theLeft side of the triangle")
     let givenSideLeft = Double(readLine()!)!
+    print("Input the Bottom of the triangle")
     let givenBottom = Double(readLine()!)!
     let perit = perimeterOfTriangle(w: givenBottom, ls: givenSideLeft, rs: givenSideRight)
     print("The perimeter of triangle is \(perit)")
 case "4":
+    print("Input the Width of paralellogram")
     let givenBottom = Double(readLine()!)!
+    print("Input the side length of paralellogram")
     let givenSideLeft = Double(readLine()!)!
     let perip = perimeterOfparallelogram(w: givenBottom, ls: givenSideLeft)
     print("The perimeter of parallelogram is \(perip)")
 case "5":
+    print("Input the Bottom of the trapezoid")
     let givenBottom = Double(readLine()!)!
+    print("Input the Top of the trapezoid")
     let givenTop = Double(readLine()!)!
+    print("Input the Left side of the trapezoid")
     let givenSideLeft = Double(readLine()!)!
+    print("Input the right side of the trapezoid")
     let givenSideRight = Double(readLine()!)!
     let peritp = perimeterOfTrapezoid(w: givenBottom, t: givenTop, ls: givenSideLeft, rs: givenSideRight)
     print("The perimeter of trapezoid is \(peritp)")
     
+     return
 }
     
     
