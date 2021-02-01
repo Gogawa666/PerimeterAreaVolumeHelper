@@ -89,6 +89,12 @@ func perimeterOfparallelogram(w: Double, ls: Double) -> Double {
     
 }
 
+/// find the area of trapezoid
+/// - Parameters:
+///   - w: bottom of the trapezoid
+///   - h: hight of the trapezoid
+///   - t: top of the trapezoid
+/// - Returns: The area of trapezoid
 func areaOfTrapezoid(w: Double, h: Double, t: Double ) -> Double {
     
     return 0.5 * (w+t) * h
@@ -110,6 +116,25 @@ func perimeterOfTrapezoid(w: Double, t: Double, ls: Double, rs: Double) -> Doubl
 
 //MARK: Input
 
+print("Are you looking for an area or perimeter?")
+print("enter (P) for parameter and (A) for area")
+let valueChoice = readLine()
+print("which of which shape?")
+print("Rectangle (1)")
+print("Triangle (2)")
+print("Circle (3)")
+print("Parallelogram (4)")
+print("Trapezoid (5)")
+
+
+let shapeChoice = readLine()
+
+
+
+
+
+
+
 let givenLength = 5.0
 let givenBottom = 2.0
 let givenRadius = 4.0
@@ -121,6 +146,11 @@ let givenTop = 5.0
   
 
 //MARK: Process
+
+
+
+
+
 let area = areaOfRectangle(l: givenBottom, w: givenBottom)
 let peri = perimeterOfRectangle(l: givenLength, w: givenBottom)
 let areac = areaOfCircle(r: givenRadius)
@@ -130,7 +160,7 @@ let perit = perimeterOfTriangle(w: givenBottom, ls: givenSideleft, rs: givenSide
 let areap = areaOfparallelogram(w: givenBottom, h: givenHight)
 let perip = perimeterOfparallelogram(w: givenBottom, ls: givenSideleft)
 let areatp = areaOfTrapezoid(w: givenBottom, h: givenHight, t: givenTop)
-let peritp = perimeterOfTrapezoid(w: givenBottom, ls: givenSideleft, rs: givenSideright, t: givenTop)
+let peritp = perimeterOfTrapezoid(w: givenBottom, t: givenTop, ls: givenSideleft, rs: givenSideright)
 
 
 //MARK: Output
@@ -138,9 +168,9 @@ let peritp = perimeterOfTrapezoid(w: givenBottom, ls: givenSideleft, rs: givenSi
 
 
 
+
+
 print("Select the tyoe of shape and value you want")
-
-
 
 print("The area of lectangle is \(area)") //Example of "string interpolation"
 
