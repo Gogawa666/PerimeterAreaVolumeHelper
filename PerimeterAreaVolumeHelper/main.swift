@@ -8,32 +8,32 @@
 import Foundation
 
 
-/// Finds the area of a rectangle
-/// - Parameter length: length of rectangle
-/// - Parameter width: width of rectangle
-/// - Returns: area of the rectangle
-func areaOfRectangle(l: Double, w: Double) -> Double {
-    
-    return l * w
-    
-}
+///// Finds the area of a rectangle
+///// - Parameter length: length of rectangle
+///// - Parameter width: width of rectangle
+///// - Returns: area of the rectangle
+//func areaOfRectangle(l: Double, w: Double) -> Double {
+//
+//    return l * w
+//
+//}
 
-/// Find the perimeter of rectangle
-/// - Parameter length: length of rectangle
-/// - Parameter width: width of rectangle
-/// - Returns: perimeter of the rectange
+// Find the perimeter of rectangle
+// - Parameter length: length of rectangle
+// - Parameter width: width of rectangle
+// - Returns: perimeter of the rectange
 func perimeterOfRectangle(l: Double, w: Double) -> Double {
     
     return (l + w) * 2
     
 }
 
-/// Find the area of circle
-/// - Parameter radius: the distance from the centre of circle to its outer edge
-/// - Returns: area of the circle
-func areaOfCircle(r: Double) -> Double {
-    return Double.pi * r * r
-}
+///// Find the area of circle
+///// - Parameter radius: the distance from the centre of circle to its outer edge
+///// - Returns: area of the circle
+//func areaOfCircle(r: Double) -> Double {
+//    return Double.pi * r * r
+//}
 
 /// Find the parameter of circle
 /// - Parameter radius: the distance from the centre of circle to its outer edge
@@ -44,16 +44,16 @@ func perimeterOfCircle(r: Double) -> Double {
     
 }
 
-/// Find the area of Triangle
-/// - Parameters:
-///   - l: height of the triangle
-///   - w: base of the triangle
-/// - Returns: area of the triangle
-func areaOfTriangle(h: Double, w: Double) -> Double {
-    
-    return h * w * 1/2
-    
-}
+///// Find the area of Triangle
+///// - Parameters:
+/////   - l: height of the triangle
+/////   - w: base of the triangle
+///// - Returns: area of the triangle
+//func areaOfTriangle(h: Double, w: Double) -> Double {
+//
+//    return h * w * 1/2
+//
+//}
 
 /// Find the perimeter of triangle
 /// - Parameters:
@@ -67,16 +67,16 @@ func perimeterOfTriangle(w: Double, ls: Double, rs: Double) -> Double {
     
 }
 
-/// Find the area of paralellogram
-/// - Parameters:
-///   - w: width of the paralellogram
-///   - h: hight of the paralellogram
-/// - Returns: area of the paralellogram
-func areaOfparallelogram(w: Double, h: Double) -> Double {
-    
-    return w * h
-    
-}
+///// Find the area of paralellogram
+///// - Parameters:
+/////   - w: width of the paralellogram
+/////   - h: hight of the paralellogram
+///// - Returns: area of the paralellogram
+//func areaOfparallelogram(w: Double, h: Double) -> Double {
+//
+//    return w * h
+//
+//}
 
 ///  Find the perimeter of paralellogram
 /// - Parameters:
@@ -89,17 +89,17 @@ func perimeterOfparallelogram(w: Double, ls: Double) -> Double {
     
 }
 
-/// find the area of trapezoid
-/// - Parameters:
-///   - w: bottom of the trapezoid
-///   - h: hight of the trapezoid
-///   - t: top of the trapezoid
-/// - Returns: The area of trapezoid
-func areaOfTrapezoid(w: Double, h: Double, t: Double ) -> Double {
-    
-    return 0.5 * (w+t) * h
-    
-}
+///// find the area of trapezoid
+///// - Parameters:
+/////   - w: bottom of the trapezoid
+/////   - h: hight of the trapezoid
+/////   - t: top of the trapezoid
+///// - Returns: The area of trapezoid
+//func areaOfTrapezoid(w: Double, h: Double, t: Double ) -> Double {
+//
+//    return 0.5 * (w+t) * h
+//
+//}
 
 /// Find the perimeter of trapezoid
 /// - Parameters:
@@ -114,11 +114,14 @@ func perimeterOfTrapezoid(w: Double, t: Double, ls: Double, rs: Double) -> Doubl
     
 }
 
+
+
+
+
+
+
 //MARK: Input
 
-print("Are you looking for an area or perimeter?")
-print("enter (P) for parameter and (A) for area")
-let valueChoice = readLine()
 print("which of which shape?")
 print("Rectangle (1)")
 print("Triangle (2)")
@@ -126,41 +129,59 @@ print("Circle (3)")
 print("Parallelogram (4)")
 print("Trapezoid (5)")
 
+let shapeChoice = String(readLine()!)
 
-let shapeChoice = readLine()
+switch shapeChoice {
 
-
-
-
-
-
-
-let givenLength = 5.0
-let givenBottom = 2.0
-let givenRadius = 4.0
-let givenHight = 5.0
-let givenSideleft = 12.0
-let givenSideright = 3.0
-let givenTop = 5.0
-
-  
-
+case "1":
+    let givenLength = Double(readLine()!)!
+    let givenBottom = Double(readLine()!)!
+    let peri = perimeterOfRectangle(l: givenLength, w: givenBottom)
+    print("The perimeter of lencangle is \(peri)")
+    
+case "2":
+    let Radius = Double(readLine()!)!
+    let peric = perimeterOfCircle(r: Radius)
+    print("The perimeter of circle is \(peric)")
+case "3":
+    let givenSideRight = Double(readLine()!)!
+    let givenSideLeft = Double(readLine()!)!
+    let givenBottom = Double(readLine()!)!
+    let perit = perimeterOfTriangle(w: givenBottom, ls: givenSideLeft, rs: givenSideRight)
+    print("The perimeter of triangle is \(perit)")
+case "4":
+    let givenBottom = Double(readLine()!)!
+    let givenSideLeft = Double(readLine()!)!
+    let perip = perimeterOfparallelogram(w: givenBottom, ls: givenSideLeft)
+    print("The perimeter of parallelogram is \(perip)")
+case "5":
+    let givenBottom = Double(readLine()!)!
+    let givenTop = Double(readLine()!)!
+    let givenSideLeft = Double(readLine()!)!
+    let givenSideRight = Double(readLine()!)!
+    let peritp = perimeterOfTrapezoid(w: givenBottom, t: givenTop, ls: givenSideLeft, rs: givenSideRight)
+    print("The perimeter of trapezoid is \(peritp)")
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
 //MARK: Process
 
 
 
 
 
-let area = areaOfRectangle(l: givenBottom, w: givenBottom)
-let peri = perimeterOfRectangle(l: givenLength, w: givenBottom)
-let areac = areaOfCircle(r: givenRadius)
-let peric = perimeterOfCircle(r: givenRadius)
-let areat = areaOfTriangle(h: givenHight, w: givenBottom)
-let perit = perimeterOfTriangle(w: givenBottom, ls: givenSideleft, rs: givenSideright)
-let areap = areaOfparallelogram(w: givenBottom, h: givenHight)
-let perip = perimeterOfparallelogram(w: givenBottom, ls: givenSideleft)
-let areatp = areaOfTrapezoid(w: givenBottom, h: givenHight, t: givenTop)
-let peritp = perimeterOfTrapezoid(w: givenBottom, t: givenTop, ls: givenSideleft, rs: givenSideright)
 
 
 //MARK: Output
@@ -170,19 +191,9 @@ let peritp = perimeterOfTrapezoid(w: givenBottom, t: givenTop, ls: givenSideleft
 
 
 
-print("Select the tyoe of shape and value you want")
 
-print("The area of lectangle is \(area)") //Example of "string interpolation"
 
-print("The perimeter of lencangle is \(peri)")
 
-print("The area of circle is \(areac)")
-
-print("The perimeter of circle is \(peric)")
-
-print("The area of triangle is \(areat)")
-
-print("The perimeter of triangle is \(perit)")
 
 
 
